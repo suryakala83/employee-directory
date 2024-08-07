@@ -1,0 +1,46 @@
+<div class="task d-flex align-items-center justify-content-between" [ngClass]="{ 'completed-task': task.isCompleted }">
+  <div>
+    <img [src]="
+        task.isCompleted
+          ? 'assets/Images/checkbox-checked.svg'
+          : 'assets/Images/checkbox.svg'
+      " (click)="toggleTaskStatus()" />
+    {{ task.name }}
+  </div>
+  <div class="date">{{ task.dueDate | customDate }}</div>
+  <div class="details-box p-3" [ngClass]="{ 'completed-task': task.isCompleted }">
+    <div class="task-details w-100">
+      <div>
+        <div class="title mb-4">
+          <h2 class="p-0 fw-bold">{{ task.name }}</h2>
+          <p>{{ task.createdAt | dateDifference }}</p>
+        </div>
+        <div>
+          <h5 class="fw-bold">Description</h5>
+          <p>{{ task.description }}</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <div>
+          <img [src]="
+              task.isCompleted
+                ? 'assets/Images/checkbox-checked.svg'
+                : 'assets/Images/checkbox.svg'
+            " (click)="toggleTaskStatus()" />
+        </div>
+        <div class="d-flex">
+          <div *ngIf="!task.isCompleted" class="me-3">
+            <img src="assets/Images/edit-image.svg" (click)="onEditTask()" />
+          </div>
+          <div>
+            <img [src]="
+                task.isCompleted
+                  ? 'assets/Images/delete-completed-task.svg'
+                  : 'assets/Images/delete-pending-task.svg'
+              " (click)="deleteById(task.id)" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

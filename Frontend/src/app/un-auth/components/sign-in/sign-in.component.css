@@ -1,0 +1,78 @@
+.auth-page {
+  background-image: url("../../../../assets/Images/signin-page-background.svg");
+  background-size: cover;
+  background-position: center;
+}
+.auth-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px 0px #0000001a;
+}
+.card-title h1 {
+  font-weight: 700;
+  color: #ba5112;
+}
+.sign-in .card-title p {
+  font-size: 18px;
+  color: #555;
+}
+.auth-card input {
+  margin: 10px 0;
+  box-shadow: 2px 2px 8px 0px #0000001a;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.auth-card button {
+  background-color: #edb046;
+  box-shadow: 2px 2px 6px 0px #0000001a;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 15px;
+}
+.password-container {
+  position: relative;
+}
+.password-container input {
+  width: 100%;
+}
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.sign-up .auth-card {
+  background-color: #edb046;
+}
+.sign-up button {
+  background-color: #ba5112;
+  color: #ffffff;
+}
+.sign-up .card-title h1,
+.sign-up p {
+  color: #ffffff;
+}
+.sign-in .card-title h1 {
+  color: #ba5112;
+}
+
+p a,
+p a:hover {
+  color: #ba5112;
+  cursor: pointer;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .toggle-password {
+    display: none;
+  }
+}

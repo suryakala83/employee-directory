@@ -1,0 +1,46 @@
+<div class="container-fluid auth-page d-flex justify-content-center align-items-center vh-100 m-0 p-0"
+    [ngClass]="{ 'sign-in': !isSignUp, 'sign-up': isSignUp }">
+    <div class="auth-card d-flex justify-content-center col-10 col-md-7 p-5">
+        <div class="card-body text-center d-flex justify-content-center flex-column p-1">
+            <div class="card-title mb-5">
+                <h1 class="display-6">To-Do App</h1>
+                <p class="lead">Start organizing your life day by day</p>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" formControlName="userName"
+                            placeholder="Enter Your Username" />
+                        <div *ngIf="loginForm.get('userName')?.invalid && loginForm.get('userName')?.touched"
+                            class="text-danger">
+                            Username is required.
+                        </div>
+                    </div>
+                    <div class="password-container">
+                        <input type="password" formControlName="password" placeholder="Enter Your Password"
+                            [type]="passwordFieldType" />
+                        <img src="assets/Images/password-hide.svg" class="toggle-password"
+                            (click)="togglePasswordVisibility()" />
+                        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                            class="text-danger">
+                            <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</div>
+                            <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6
+                                characters.</div>
+                            <div *ngIf="loginForm.get('password')?.errors?.['pattern']">Password must include at least
+                                one uppercase letter, one digit, and one non-alphanumeric character.</div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="errorMessage" class="text-danger mb-3">{{ errorMessage }}</div>
+                <div>
+                    <button type="submit" class="btn btn-warning btn-block mb-3">{{ isSignUp ? 'Sign Up' : 'Sign In'
+                        }}</button>
+                    <p class="mb-0">
+                        {{ isSignUp ? 'Already have an account? Sign in' : 'Don’t have an account? Create' }}
+                        <a (click)="toggleAuthMode()">here</a>.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

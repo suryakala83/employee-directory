@@ -1,0 +1,59 @@
+<div class="container-fluid d-flex justify-content-center row p-0 mt-sm-5">
+  <div class="col-11 p-0 m-0">
+    <div class="card mb-4">
+      <div class="card-body d-flex justify-content-center ms-sm-5 m-0 flex-column">
+        <h1>Hello, Beautiful Human!</h1>
+        <p class>What do you want to do today?</p>
+      </div>
+      <img class="working-girl" src="assets\Images\young-smiling-woman-working-at-laptop.png" />
+    </div>
+    <div class="task-container d-flex flex-column-reverse flex-md-row pt-5">
+      <div class="d-flex flex-column col-11 col-md-8">
+        <div class="d-flex justify-content-between mb-4">
+          <h3 class="pt-5 p-md-0">Today's Tasks</h3>
+          <button *ngIf="tasks.length>0" (click)="onDeleteAll()">Delete All</button>
+          <div class="d-md-none align-items-center mb-4 pt-5 pt-md-0">
+            <p class="ps-5">{{ date | customDate }}</p>
+          </div>
+        </div>
+        <div class="task-list-container d-flex flex-column h-100">
+          <ng-container *ngIf="isTaskLoaded">
+            @if (tasks.length>0) {
+              <div class="task-list" *ngFor="let task of tasks">
+                <div>
+                  <app-task [task]="task" (taskUpdated)="handleTaskChange($event)"></app-task>
+                </div>
+              </div>
+            }
+            @else {
+              <div class="d-flex justify-content-center">
+                No Data
+              </div>
+            }
+          </ng-container>
+        </div>
+      </div>
+      <div class="d-flex flex-column col-11 col-md-4">
+        <div class="d-none d-md-flex align-items-center mb-4">
+          <p class="ps-md-5">{{ date | customDate }}</p>
+        </div>
+        <div class="stat-container d-flex justify-content-center align-items-center flex-row flex-md-column ms-5">
+          <div class="completed-task-container me-4 me-md-0 mb-md-5 w-100">
+            <img src="assets/Images/icon-park-solid_check-one.svg" />
+            <div class="d-flex justify-content-center align-items-center flex-column text-light">
+              <h1 class="h1">{{ completedPercentage }}%</h1>
+              <p>Completed tasks</p>
+            </div>
+          </div>
+          <div class="pending-task-container w-100 ms-lg-none">
+            <img src="assets/Images/icon-park-solid_time.svg" />
+            <div class="d-flex justify-content-center align-items-center flex-column text-light">
+              <h1 class="h1">{{ activePercentage }}%</h1>
+              <p>Active tasks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

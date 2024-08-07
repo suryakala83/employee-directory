@@ -1,0 +1,24 @@
+h1 {
+  color: #ba5112;
+  font-size: 2rem;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav-item {
+  height: 3rem;
+}
+.nav-item :hover {
+  cursor: pointer;
+}
+button {
+  border: none;
+  background-color: inherit;
+  box-shadow: 0px 0px 20px 0px #0000001a;
+  border-radius: 12px;
+}
+.active {
+  background: #edb046;
+}

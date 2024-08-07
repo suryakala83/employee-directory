@@ -1,0 +1,26 @@
+<div class="task-container d-flex align-items-center flex-column">
+    <div class="d-flex align-items-center justify-content-between w-100 mb-4">
+        <h3>{{title}}</h3>
+        <div class="d-flex align-items-center justify-content-between">
+            <p class="mb-0 ms-5">{{date | customDate}}</p>
+        </div>
+    </div>
+    <div class="d-flex w-100">
+        <div class="task-list-container d-flex flex-column w-100 h-100">
+            <ng-container *ngIf="isTaskLoaded">
+                @if(tasks.length>0){
+                <div class="task-list" *ngFor="let task of tasks">
+                    <div>
+                        <app-task [task]="task" (taskUpdated)="handleTaskChange($event)"></app-task>
+                    </div>
+                </div>
+                }
+                @else {
+                <div class="d-flex justify-content-center align-items-center">
+                    No Data
+                </div>
+                }
+            </ng-container>
+        </div>
+    </div>
+</div>

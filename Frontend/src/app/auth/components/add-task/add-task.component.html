@@ -1,0 +1,32 @@
+<div class="modal d-block">
+  <div class="modal-content">
+    <div class="modal-body p-5">
+      <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+        <h3>{{isEditMode ? "Edit Task":"Add Task"}}</h3>
+        <div class="mb-3 form-group">
+          <input type="text" class="form-control" formControlName="name" id="taskTitle" placeholder="Add Task"
+            [class.input-error]="taskForm.get('name')?.invalid && taskForm.get('name')?.touched && isSubmitted"
+            required />
+        </div>
+        <div *ngIf="taskForm.get('name')?.invalid && taskForm.get('name')?.touched && isSubmitted" class="error">Name is
+          required.</div>
+        <div class="mb-3 form-group">
+          <textarea id="taskDescription" class="form-control" formControlName="description" rows="3"
+            placeholder="Add Description"></textarea>
+        </div>
+        <div class="mb-3 form-group" for="taskDue">
+          <input type="text" class="form-control" id="taskDue" formControlName="dueDate" placeholder="Add Due Date"
+            onfocus="this.type='date'"
+            [class.input-error]="taskForm.get('dueDate')?.invalid && taskForm.get('dueDate')?.touched && isSubmitted"
+            required />
+        </div>
+        <div *ngIf="taskForm.get('dueDate')?.invalid && taskForm.get('dueDate')?.touched && isSubmitted" class="error">
+          Due Date is required.</div>
+        <div class="w-100 d-flex justify-content-end align-items-center gx-5 buttons">
+          <button type="button" class="btn" (click)="onCancel()">Cancel</button>
+          <button type="submit" class="btn">{{isEditMode?"Update":"Add"}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

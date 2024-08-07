@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('assets/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('woff2'),
+       url('assets/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('woff');
+}
+* {
+  margin: 0px;
+}
+body {
+  font-family: "Lexend";
+}
+p {
+  font-size: 16px;
+}
+button :hover {
+  cursor: pointer;
+}
+.task-list-container {
+  gap: 20px;
+}
+.task-list {
+  box-shadow: 2px 2px 6px 0px #0000001a;
+  width: 100%;
+  border-radius: 12px;
+  line-height: 60px;
+}
+ul {
+  list-style: none;
+}
+.list-group-item input {
+  margin-right: 1rem;
+  box-shadow: 2px 2px 6px 0px #0000001a;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.modal-dialog {
+  margin: 0px;
+}

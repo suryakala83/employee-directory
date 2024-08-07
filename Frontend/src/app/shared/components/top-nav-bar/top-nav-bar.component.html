@@ -1,0 +1,40 @@
+<div class="d-md-flex justify-content-between align-items-center d-none">
+  <h1>{{ title }}</h1>
+  <button class="signOutButton d-flex justify-content-around align-items-center" (click)="signOut()">
+    Sign Out
+    <img src="assets/Images/signout-img.svg" />
+  </button>
+</div>
+
+<div class="d-md-none p-2 mb-3">
+  <div class="d-flex align-items-center">
+    <h1 class="w-50">To-Do App</h1>
+    <div class="d-flex align-items-center w-50">
+      <button type="button" (click)="openAddTaskContainer()"
+        class="add-task d-flex align-items-center justify-content-around w-50 h-50 me-3">
+        Add Task
+        <img src="assets/Images/add-button.svg" />
+      </button>
+      <button class="signOutButton d-flex justify-content-around align-items-center w-50 h-50" (click)="signOut()">
+        Sign Out
+        <img src="assets/Images/signout-img.svg" />
+      </button>
+    </div>
+  </div>
+</div>
+<div class="d-md-none p-2">
+  <div class="dropdown ms-3">
+    <button class="btn h-50 col-11 dropdown-btn h-50 col-11 d-flex align-items-center justify-content-between"
+      type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+      <span class="ms-2">{{ selectedItem }}</span>
+      <img class="me-3" src="assets/Images/arrowup-Image.svg" />
+    </button>
+    <ul class="dropdown-menu col-11" aria-labelledby="dropdownMenuButton1">
+      <li *ngFor="let item of items" class="dropdown-item" (click)="onSelectItem(item)">
+        <div [routerLink]="item.path" routerLinkActive="active">
+          <span>{{ item.field }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
