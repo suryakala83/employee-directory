@@ -1,0 +1,15 @@
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\bin\Debug\net8.0\TodoApp.Data.deps.json
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\bin\Debug\net8.0\TodoApp.Data.runtimeconfig.json
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\bin\Debug\net8.0\TodoApp.Data.dll
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\bin\Debug\net8.0\TodoApp.Data.pdb
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.csproj.AssemblyReference.cache
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.AssemblyInfoInputs.cache
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.AssemblyInfo.cs
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.sourcelink.json
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.dll
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\refint\TodoApp.Data.dll
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.pdb
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\TodoApp.Data.genruntimeconfig.cache
+C:\Users\surya\source\repos\employee-directory\Backend\TodoApp.Data\obj\Debug\net8.0\ref\TodoApp.Data.dll
